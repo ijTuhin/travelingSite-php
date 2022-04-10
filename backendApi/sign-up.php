@@ -5,12 +5,11 @@
     $email = $_POST['email'];
     $password = $_POST['password'];
     $cpassword = $_POST['cpassword'];
-    $image = $_POST['image'];
-    // $image = $_FILES['image']['name'];
-    // $tmp_name = $_FILES['image']['tmp_name'];
+    $image = $_FILES['image']['name'];
+    $tmp_name = $_FILES['image']['tmp_name'];
 
     if($password==$cpassword){
-        // move_uploaded_file($tmp_name, "../user-img/$image");
+        move_uploaded_file($tmp_name, "../user-img/$image");
         $insert = mysqli_query($connect, "INSERT INTO signup(name, phone, email, password, image) VALUES('$name','$phone', '$email', '$password','$image')");
         
         if($insert){
