@@ -24,22 +24,23 @@
     </header>
     <main>
         <div class="container">
-            <form class="signUp-form" action="../backendApi/sign-up.php">
+            <form class="signUp-form" action="../backendApi/sign-up.php" method="POST">
                 <h3>Please Sign-up</h3>
                 <hr>
                 <div class="row-input">
-                    <input type="text" placeholder="enter your name" name="" id="">
-                    <input type="number" placeholder="enter phone number" name="" id="">
+                    <input type="text" placeholder="enter your name" name="name" id="">
+                    <input type="number" placeholder="enter phone number" name="phone" id="">
                 </div>
                 <div class="row-input">
-                    <input type="email" placeholder="enter your email" name="" id="signUp-email" style="width: 100%;">
+                    <input type="email" placeholder="enter your email" name="email" id="signUp-email"
+                        style="width: 100%;">
                 </div>
                 <div class="row-input">
-                    <input type="password" placeholder="enter password" name="" id="">
-                    <input type="password" placeholder="confirm password" name="" id="">
+                    <input type="password" placeholder="enter password" name="password" id="">
+                    <input type="password" placeholder="confirm password" name="cpassword" id="">
                 </div>
                 <div class="img-input">
-                    <span>Select an image: </span><input type="file" name="" id="">
+                    <span>Select an image: </span><input type="file" name="image" id="">
                 </div>
                 <span><small>Already a user? <a href="../index.html">Login here</a></small></span><br>
                 <input id="button" type="submit" value="Login">
