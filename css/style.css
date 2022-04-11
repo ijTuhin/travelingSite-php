@@ -1,6 +1,6 @@
 body{
     margin: auto;
-    background-image: url('../images/home-page.jpg');
+    background-image: url('../images/home.jpg');
     background-repeat: no-repeat;
     background-size: 100% 150% ;
     background-position: center center;
@@ -15,9 +15,8 @@ header{
     margin-top: 5px;
 }
 .navbar a{
-    text-decoration: none;
-    color: darkgray;
-    /* background-color: antiquewhite; */
+    /* text-decoration: none; */
+    color: whitesmoke;
     padding: 5px;
 }
 .navbar a:hover{
@@ -26,17 +25,16 @@ header{
     background-color: antiquewhite;
     padding: 5px;
 }
-main{
-    
-}
 .container{
+    color: aliceblue;
     margin: 75px auto;
     padding: 25px 0px;
     width: 30%;
     height: 40%;
     border: none;
-    background-color: rgba(43, 48, 45, 0.6);
+    background-color: rgba(43, 48, 45, 0.4);
 }
+/* Login form */
 .form{
     margin: 30px;
 }
@@ -52,4 +50,29 @@ main{
 }
 .form span{
     margin-left: 5px;
+}
+/* Sign-up form */
+.signUp-form{
+    margin: 30px;
+}
+.signUp-form .row-input{
+    display: flex;
+    margin: 5px 0px;
+}
+.signUp-form .row-input input{
+    width: 50%;
+    padding: 5px 15px;
+}
+.signUp-form .img-input{
+    background-color: aliceblue;
+    color: darkgray;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px 0px;
+}
+.signUp-form .img-input input{
+    width: 55%;
+    padding: 5px 15px;
 }
