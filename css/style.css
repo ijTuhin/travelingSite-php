@@ -1,0 +1,13 @@
+body{
+    margin: 0px 100px;
+}
+.form{
+    margin: 150px 450px;
+}
+.form input{
+    padding: 5px 15px;
+    margin: 5px;
+}
+.form span{
+    margin-left: 5px;
+}
