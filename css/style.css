@@ -1,31 +1,37 @@
-body{
+body {
     margin: auto;
-    background-image: url('../images/home.jpg');
+    /* background-image: url('../images/home.jpg');
     background-repeat: no-repeat;
     background-size: 100% 150% ;
-    background-position: center center;
+    background-position: center center; */
+    background-color: rgb(108, 238, 208);
 }
-header{
+
+header {
     margin: 0px 80px;
 }
-.navbar{
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 5px;
 }
-.navbar a{
+
+.navbar a {
     /* text-decoration: none; */
-    color: whitesmoke;
+    /* color: whitesmoke; */
     padding: 5px;
 }
-.navbar a:hover{
+
+.navbar a:hover {
     text-decoration: none;
     color: darkgray;
     background-color: antiquewhite;
     padding: 5px;
 }
-.container{
+
+.container {
     color: aliceblue;
     margin: 75px auto;
     padding: 25px 0px;
@@ -34,36 +40,44 @@ header{
     border: none;
     background-color: rgba(43, 48, 45, 0.4);
 }
+
 /* Login form */
-.form{
+.form {
     margin: 30px;
 }
-.form .input{
+
+.form .input {
     width: 70%;
     padding: 5px 15px;
     margin: 5px 0px;
 }
-.form #button{
+
+.form #button {
     width: 30%;
     padding: 5px 15px;
     margin: 5px 0px;
 }
-.form span{
+
+.form span {
     margin-left: 5px;
 }
+
 /* Sign-up form */
-.signUp-form{
+.signUp-form {
     margin: 30px;
 }
-.signUp-form .row-input{
+
+.signUp-form .row-input {
     display: flex;
     margin: 5px 0px;
 }
-.signUp-form .row-input input{
+
+.signUp-form .row-input input {
     width: 50%;
     padding: 5px 15px;
 }
-.signUp-form .img-input{
+
+.signUp-form .img-input {
     background-color: aliceblue;
     color: darkgray;
     padding: 5px 15px;
@@ -72,7 +86,8 @@ header{
     align-items: center;
     margin: 5px 0px;
 }
-.signUp-form .img-input input{
+
+.signUp-form .img-input input {
     width: 55%;
     padding: 5px 15px;
 }
