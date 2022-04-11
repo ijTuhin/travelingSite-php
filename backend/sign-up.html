@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <!-- Tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Travel Wander-Home</title>
 </head>
@@ -25,31 +25,10 @@
     </header>
     <main>
         <div class="container">
-            <!-- <form class="signUp-form" action="../backendApi/sign-up.php" method="POST" enctype="multipart/form-data">
-                <h3>Please Sign-up</h3>
-                <hr>
-                <div class="row-input">
-                    <input type="text" placeholder="enter your name" name="name" id="">
-                    <input type="number" placeholder="enter phone number" name="phone" id="">
-                </div>
-                <div class="row-input">
-                    <input type="email" placeholder="enter your email" name="email" id="signUp-email"
-                        style="width: 100%;">
-                </div>
-                <div class="row-input">
-                    <input type="password" placeholder="enter password" name="password" id="">
-                    <input type="password" placeholder="confirm password" name="cpassword" id="">
-                </div>
-                <div class="img-input">
-                    <span>Select an image: </span><input type="file" name="image" id="">
-                </div>
-                <span><small>Already a user? <a href="../index.html">Login here</a></small></span><br>
-                <input id="button" type="submit" value="Login">
-            </form> -->
             <div class=" flex items-center justify-center py-4 px-2 sm:px-6 lg:px-8">
-                <div class="max-w-md w-full space-y-6">
+                <div class="w-80 h-80 space-y-6">
                     <div>
-                        <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
+                        <h2 class="mt-6 text-center text-2xl font-extrabold text-gray-900">Sign in to your account</h2>
                     </div>
                     <form class="mt-8 space-y-6" action="../backendApi/sign-up.php" method="POST"
                         enctype="multipart/form-data">
@@ -60,13 +39,13 @@
                                     <div>
                                         <label for="name" class="sr-only">Your name</label>
                                         <input id="name" name="name" type="text" autocomplete="name" required
-                                            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                            class="appearance-none rounded-none relative block w-full px-3 py-1 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                             placeholder="Enter name">
                                     </div>
                                     <div>
                                         <label for="phone-number" class="sr-only">Phone number</label>
                                         <input id="phone-number" name="phone" type="tel" autocomplete="phone" required
-                                            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                            class="appearance-none rounded-none relative block w-full px-3 py-1 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                             placeholder="Phone number">
                                     </div>
                                 </div>
@@ -75,7 +54,7 @@
                                         <label for="email-address" class="sr-only">Email address</label>
                                         <input id="email-address" name="email" type="email" autocomplete="email"
                                             required
-                                            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                            class="appearance-none rounded-none relative block w-full px-3 py-1 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                             placeholder="Email address">
                                     </div>
                                 </div>
@@ -84,22 +63,22 @@
                                         <label for="password" class="sr-only">Password</label>
                                         <input id="password" name="password" type="password"
                                             autocomplete="current-password" required
-                                            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                            class="appearance-none rounded-none relative block w-full px-3 py-1 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                             placeholder="Password">
                                     </div>
                                     <div>
                                         <label for="cpassword" class="sr-only">Confirm Password</label>
                                         <input id="cpassword" name="cpassword" type="password"
                                             autocomplete="confirm-password" required
-                                            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                            class="appearance-none rounded-none relative block w-full px-3 py-1 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                             placeholder="Confirm Password">
                                     </div>
                                 </div>
                                 <div class="flex items-center justify-between">
-                                    <p class="ml-1">Choose a picture</p>
+                                    <p class="ml-1 text-sm">Choose a picture</p>
                                     <div>
                                         <input id="user-image" name="image" type="file" autocomplete="image" required
-                                            class="appearance-none rounded-none relative block w-full px-7 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm">
+                                            class="appearance-none rounded-none relative block w-full px-1 border-0 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm">
                                     </div>
                                 </div>
                             </div>
