@@ -1,18 +1,7 @@
 <?php
 session_start();
 include("connectDB.php");
-
-$email = $_POST['email'];
-$password = $_POST['password'];
-
-$check = mysqli_query($connect, "SELECT * FROM signup WHERE email='$email' AND password='$password'");
-if (mysqli_num_rows($check) > 0) {
-  echo '
-          <script>
-          alert("Welcome to wander");
-            // window.location = "../backendApi/user-info.php";
-          </script>
-        ';
+$userdata = mysqli_query($connect, "SELECT * FROM signup");
 ?>
 
 <!DOCTYPE html>
@@ -45,26 +34,16 @@ if (mysqli_num_rows($check) > 0) {
         </nav>
     </header>
     <main>
-        <?php while ($data = mysqli_fetch_assoc($check)) {
+        <?php
+while ($data = mysqli_fetch_assoc($userdata)) {
 ?>
                 <p>Name: <?php echo $data['name']; ?> </p>
                 <p>Phone no: <?php echo $data['phone']; ?></p>
                 <p>Email: <?php echo $data['email']; ?></p>
         <?php
-  }
+}
 ?>
     </main>
 </body>
 
 </html>
-<?php
-}
-else {
-  echo '
-          <script>
-            alert("USER NOT FOUND!!");
-            window.location = "../";
-          </script>
-        ';
-}
-?>
