@@ -91,3 +91,11 @@ header {
     width: 55%;
     padding: 5px 15px;
 }
+
+/* Main Home page */
+#menu-btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color:var(--black);
+    display: none;
+ }
