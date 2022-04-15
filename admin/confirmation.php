@@ -1,7 +1,8 @@
 <?php
 session_start();
 include("../backendApi/connectDB.php");
-$userdata = mysqli_query($connect, "SELECT * FROM user");
+$u_id = $_SESSION['userinfo']['id'];
+$userdata = mysqli_query($connect, "SELECT * FROM user WHERE  id='$u_id'  ");
 ?>
 
 
@@ -37,7 +38,7 @@ $userdata = mysqli_query($connect, "SELECT * FROM user");
                 <a href="user-info.php"
                     class="text-lg px-2 py-1 ml-1 hover:underline hover:underline-offset-4 hover:decoration-2 text-slate-400 font-normal hover:decoration-yellow-600 hover:text-yellow-600">User
                     info</a>
-                <a href="confirmation.html"
+                <a href="confirmation.php"
                     class="text-lg px-2 py-1 ml-1 hover:underline hover:underline-offset-4 hover:decoration-2 text-slate-400 font-normal hover:decoration-yellow-600 hover:text-yellow-600">Confirm</a>
             </nav>
 
@@ -49,7 +50,7 @@ $userdata = mysqli_query($connect, "SELECT * FROM user");
 
     <main>
         <div class="container py-32">
-            <!-- <table align="center" border="1px" style="width: 600px; line-height: 40px;">
+            <table align="center" border="1px" style="width: 600px; line-height: 40px;">
                 <tr>
                     <th colspan="4">User Data</th>
                 </tr>
@@ -57,21 +58,23 @@ $userdata = mysqli_query($connect, "SELECT * FROM user");
                     <th>User Name</th>
                     <th>Phone number</th>
                     <th>Email address</th>
-                    <th>User Image</th>
+                    <th>Booking Request</th>
                 </tr>
                 <?php
-while ($data = mysqli_fetch_assoc($userdata)) {
+$data = mysqli_fetch_assoc($userdata)
 ?>
                 <tr>
                     <td><?php echo $data['user_name']; ?></td>
                     <td><?php echo $data['user_phone']; ?></td>
                     <td><?php echo $data['user_email']; ?></td>
-                    <td>User Image</td>
+                    <td class="text-center"><?php echo $data['request']; ?></td>
+                    <td class="text-center">
+                        <form method="POST" action="confirm.php">
+                                <button type="submit" class="btn btn-default">Confirm</button>                      
+                        </form>
+                    </td>
                 </tr>
-                <?php
-}
-?>
-            </table> -->
+            </table>
         </div>
     </main>
 

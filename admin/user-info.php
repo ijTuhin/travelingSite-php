@@ -36,7 +36,7 @@ $userdata = mysqli_query($connect, "SELECT * FROM user");
                     class="text-lg px-2 py-1 ml-1 hover:underline hover:underline-offset-4 hover:decoration-2 text-slate-400 font-normal hover:decoration-yellow-600 hover:text-yellow-600">Admin</a>
                 <a href="user-info.php"
                     class="text-lg px-2 py-1 ml-1 hover:underline hover:underline-offset-4 hover:decoration-2 text-slate-400 font-normal hover:decoration-yellow-600 hover:text-yellow-600">User info</a>
-                <a href="confirmation.html"
+                <a href="confirmation.php"
                     class="text-lg px-2 py-1 ml-1 hover:underline hover:underline-offset-4 hover:decoration-2 text-slate-400 font-normal hover:decoration-yellow-600 hover:text-yellow-600">Confirm</a>
             </nav>
 
@@ -66,14 +66,9 @@ while ($data = mysqli_fetch_assoc($userdata)) {
                     <td><?php echo $data['user_phone']; ?></td>
                     <td><?php echo $data['user_email']; ?></td>
                     <td class="text-center"><?php echo $data['request']; ?></td>
-                    <td class="text-center">
-                        <form method="POST" action="confirm.php">
-                                <button type="submit" class="btn btn-default">Confirm</button>                      
-                        </form>
-                    </td>
                 </tr>
                 <?php
-}
+        }
 ?>
             </table>
         </div>
