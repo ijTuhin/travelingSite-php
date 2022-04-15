@@ -19,12 +19,25 @@ if (mysqli_num_rows($check) > 0) {
     $booked = mysqli_query($connect, "INSERT INTO bookings(name, email, phone, address, location, member, checkin, checkout) VALUES('$name','$email','$phone','$address','$location','$member','$checkin','$checkout') ");
 
     if ($booked) {
-        echo '
-        <script>
-            alert("Booked your trip!");
-            window.location = "../backend/bookings.html";
-        </script>
-    ';
+        $request = $_POST['request'];
+        $confirm = $_POST['confirm'];
+        $rqst = mysqli_query($connect, "INSERT INTO user(request, confirm) VALUES('1','0') ");
+        if ($rqst) {
+            echo '
+                <script>
+                    alert("Request has been processed");
+                    window.location = "../backend/bookings.html";
+                </script>
+            ';
+        }
+        else {
+            echo '
+                <script>
+                    alert("Could not make booking request! try again");
+                    window.location = "../backend/bookings.html";
+                </script>
+            ';
+        }
     }
     else {
         echo '

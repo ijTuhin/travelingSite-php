@@ -7,6 +7,8 @@ $password = $_POST['password'];
 $cpassword = $_POST['cpassword'];
 $image = $_FILES['image']['name'];
 $tmp_name = $_FILES['image']['tmp_name'];
+$request = $_POST['request'];
+$confirm = $_POST['confirm'];
 
 if ($password == $cpassword) {
 
@@ -22,7 +24,7 @@ if ($password == $cpassword) {
 
     else {
         move_uploaded_file($tmp_name, "../user-img/$image");
-        $insert = mysqli_query($connect, "INSERT INTO user(user_name, user_phone, user_email, password, image) VALUES('$user_name','$user_phone', '$user_email', '$password','$image')");
+        $insert = mysqli_query($connect, "INSERT INTO user(user_name, user_phone, user_email, password, image, request, confirm) VALUES('$user_name','$user_phone', '$user_email', '$password','$image', '0','0')");
 
         if ($insert) {
             echo '
