@@ -21,7 +21,8 @@ if (mysqli_num_rows($check) > 0) {
     if ($booked) {
         $request = $_POST['request'];
         $confirm = $_POST['confirm'];
-        $rqst = mysqli_query($connect, "INSERT INTO user(request, confirm) VALUES('1','0') ");
+        $u_id = $_SESSION['userinfo']['id'];
+        $rqst = mysqli_query($connect, "UPDATE user SET request=1 WHERE id='$u_id' ");
         if ($rqst) {
             echo '
                 <script>

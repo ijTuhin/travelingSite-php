@@ -7,6 +7,8 @@ $password = $_POST['password'];
 
 $check = mysqli_query($connect, "SELECT * FROM user WHERE user_email='$user_email' AND password='$password'");
 if (mysqli_num_rows($check) > 0) {
+  $userinfo = mysqli_fetch_array($check);
+  $_SESSION['userinfo'] = $userinfo;
   echo '
           <script>
           alert("Welcome to wander");
