@@ -38,46 +38,8 @@
 
 
     <main>
-        <div class="container mx-auto">
-            <div class="flex items-center justify-center py-48 px-2 sm:px-6 lg:px-8">
-                <div class="w-80 space-y-6">
-                    <div>
-                        <h2 class="mt-6 text-3xl font-semibold text-gray-900">Please <span
-                                class="text-yellow-500">Verify</span></h2>
-                    </div>
-                    <form class="mt-8 space-y-4" action="admin.php" method="POST" enctype="multipart/form-data">
-                        <input type="hidden" name="remember" value="true">
-                        <div class="rounded-md shadow-sm -space-y-px">
-                            <div>
-                                <label for="email-address" class="sr-only">Email address</label>
-                                <input id="email-address" name="admin_email" type="email" autocomplete="email" required
-                                    class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-gray-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                                    placeholder="Email address">
-                            </div>
-                            <div>
-                                <label for="password" class="sr-only">Password</label>
-                                <input id="password" name="password" type="password" autocomplete="current-password"
-                                    required
-                                    class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-gray-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                                    placeholder="Password">
-                            </div>
-                        </div>
-
-                        <div class="px-1 flex items-center justify-between">
-                            <p class="text-xs font-normal text-gray-900">Forgot password? <a href="backend/sign-up.html"
-                                    class="hover:text-yellow-500">Contact to the server</a></p>
-                        </div>
-
-                        <div>
-                            <button type="submit"
-                                class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                Sign in
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
+        <div class="container">
+            <p class="py-48">User Info</p>
         </div>
     </main>
 
