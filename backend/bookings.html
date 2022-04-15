@@ -46,6 +46,100 @@
     <div class="heading" style="background:url(../images/header-bg-2.png) no-repeat">
       <h1>Book now</h1>
     </div>
+
+    <!-- Booking form section -->
+    <section class="mx-96">
+      <h1 class="heading-title text-center text-4xl">book your trip!</h1>
+      <form action="book_form.php" method="post" class="my-4 book-form flex flex-col justify-center items-center">
+        <div class="flex flex-row">
+          <label for="name"></label>
+          <input class="mr-1 border py-1 px-2 pr-8 mb-1" type="text" placeholder="Your name" name="" id="name"
+            style="width: 17rem;">
+          <label for="phone"></label>
+          <input class="ml-1 border py-1 px-2 pr-8 mb-1" type="tel" placeholder="Phone number" name="" id="phone"
+            style="width: 17rem;">
+        </div>
+        <div class="flex flex-row">
+          <label for="email"></label>
+          <input class="mr-1 border py-1 px-2 pr-8 mb-1" type="email" placeholder="Email address" name="" id="email"
+            style="width: 17rem;">
+          <label for="address"></label>
+          <input class="ml-1 border py-1 px-2 pr-8 mb-1" type="text" placeholder="Address" name="" id="address"
+            style="width: 17rem;">
+        </div>
+        <hr class="mx-2 px-2 my-4 border-b border-gray-300" style="width: 35.5rem;">
+        <div class="flex flex-row w-50 justify-center items-center">
+          <label for="guest" class="w-75">Total Guests: </label>
+          <input class="border py-1 px-2 pr-8 mb-1" type="number" placeholder="Guest number" name="" id="guest"
+            style="width: 22rem;">
+        </div>
+        <hr class="mx-2 px-2 my-4 border-b border-gray-300" style="width: 35.5rem;">
+        <div class="flex flex-col justify-center items-start">
+          <label for="visiting-spot">Visiting spot</label>
+          <textarea placeholder="Places you would like to visit.." name="" id="visiting-spot" cols="30" rows="2"
+            style="width: 30rem;" class="border p-2"></textarea>
+        </div>
+        <hr class="mx-2 px-2 my-4 border-b border-gray-300" style="width: 35.5rem;">
+        <div class="flex flex-row gap-2">
+          <div class="flex flex-col">
+            <label for="check-in">Checked-in</label>
+            <input class="border py-1 px-2 pr-8 mb-1" type="date" placeholder="Checked-in" name="" id="check-in"
+              style="width: 17rem;">
+          </div>
+          <div class="flex flex-col">
+            <label for="check-out">Checked-out</label>
+            <input class="border py-1 px-2 pr-8 mb-1" type="date" placeholder="Checked-out" name="" id="check-out"
+              style="width: 17rem;">
+          </div>
+        </div>
+      </form>
+    </section>
+    <!-- <section class="booking">
+
+      <h1 class="heading-title">book your trip!</h1>
+
+      <form action="book_form.php" method="post" class="book-form">
+
+        <div class="flex">
+          <div class="input class="border py-1 px-2 pr-8 mb-1"Box">
+            <span>name :</span>
+            <input class="border py-1 px-2 pr-8 mb-1" type="text" placeholder="enter your name" name="name">
+          </div>
+          <div class="input class="border py-1 px-2 pr-8 mb-1"Box">
+            <span>email :</span>
+            <input class="border py-1 px-2 pr-8 mb-1" type="email" placeholder="enter your email" name="email">
+          </div>
+          <div class="input class="border py-1 px-2 pr-8 mb-1"Box">
+            <span>phone :</span>
+            <input class="border py-1 px-2 pr-8 mb-1" type="number" placeholder="enter your number" name="phone">
+          </div>
+          <div class="input class="border py-1 px-2 pr-8 mb-1"Box">
+            <span>address :</span>
+            <input class="border py-1 px-2 pr-8 mb-1" type="text" placeholder="enter your address" name="address">
+          </div>
+          <div class="input class="border py-1 px-2 pr-8 mb-1"Box">
+            <span>where to :</span>
+            <input class="border py-1 px-2 pr-8 mb-1" type="text" placeholder="place you want to visit" name="location">
+          </div>
+          <div class="input class="border py-1 px-2 pr-8 mb-1"Box">
+            <span>how many :</span>
+            <input class="border py-1 px-2 pr-8 mb-1" type="number" placeholder="number of guests" name="guests">
+          </div>
+          <div class="input class="border py-1 px-2 pr-8 mb-1"Box">
+            <span>arrivals :</span>
+            <input class="border py-1 px-2 pr-8 mb-1" type="date" name="arrivals">
+          </div>
+          <div class="input class="border py-1 px-2 pr-8 mb-1"Box">
+            <span>leaving :</span>
+            <input class="border py-1 px-2 pr-8 mb-1" type="date" name="leaving">
+          </div>
+        </div>
+
+        <input class="border py-1 px-2 pr-8 mb-1" type="submit" value="submit" class="btn" name="send">
+
+      </form>
+
+    </section> -->
   </main>
 
 
