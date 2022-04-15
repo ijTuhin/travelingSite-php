@@ -15,26 +15,40 @@ if (mysqli_num_rows($check) > 0) {
     $member = $_POST['member'];
     $checkin = $_POST['checkin'];
     $checkout = $_POST['checkout'];
+    $u_id = $_SESSION['userinfo']['id'];
 
     $booked = mysqli_query($connect, "INSERT INTO bookings(name, email, phone, address, location, member, checkin, checkout) VALUES('$name','$email','$phone','$address','$location','$member','$checkin','$checkout') ");
 
     if ($booked) {
-        $request = $_POST['request'];
-        $confirm = $_POST['confirm'];
-        $u_id = $_SESSION['userinfo']['id'];
-        $rqst = mysqli_query($connect, "UPDATE user SET request=1 WHERE id='$u_id' ");
-        if ($rqst) {
-            echo '
+        $confirm_check = mysqli_query($connect, "SELECT * FROM user WHERE id='$u_id' AND confirm=0");
+
+        if ($confirm_check) {
+            $request = $_POST['request'];
+            $confirm = $_POST['confirm'];
+
+            $rqst = mysqli_query($connect, "UPDATE user SET request=1 WHERE id='$u_id' ");
+            $rqst_id = mysqli_query($connect, "INSERT INTO admin(rqst_id) VALUES('$u_id')");
+            if ($rqst && $rqst_id) {
+                echo '
                 <script>
                     alert("Request has been processed");
                     window.location = "../backend/bookings.html";
                 </script>
             ';
+            }
+            else {
+                echo '
+                <script>
+                    alert("Could not make booking request! try again");
+                    window.location = "../backend/bookings.html";
+                </script>
+            ';
+            }
         }
         else {
             echo '
                 <script>
-                    alert("Could not make booking request! try again");
+                    alert("There is already a pending request. Please wait!!");
                     window.location = "../backend/bookings.html";
                 </script>
             ';
