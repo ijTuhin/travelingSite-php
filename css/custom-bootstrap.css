@@ -5,12 +5,6 @@
     bottom: initial;
     top: 50%;
 }
-/* body{
-    position: absolute;
-}
-header .fixed {
-    position: fixed;
-} */
 
 /* service section */
 .services .box-container {
@@ -22,6 +16,24 @@ header .fixed {
 .services .box-container .box img {
     height: 7rem;
 }
+
+/* Cover image part */
+.heading{
+    background-size: cover !important;
+    background-position: center !important;
+    padding-top: 10rem;
+    padding-bottom:15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ .heading h1{
+    font-size: 10rem;
+    text-transform: uppercase;
+    color:var(--white);
+    text-shadow: var(--text-shadow);
+ }
 
 /* footer section */
 :root {
