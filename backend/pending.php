@@ -1,3 +1,40 @@
+<?php
+
+session_start();
+include("../backendApi/connectDB.php");
+$u_id = $_SESSION['userinfo']['id'];
+$approved = mysqli_query($connect, "SELECT * FROM user WHERE id='$u_id' AND confirm=1 AND request=0");
+
+// if ($approved) {
+//     if ($update_admin) {
+//         echo '
+//             <script>
+//                 alert("Request approved by admin");
+//                 window.location = "../admin/user-info.php";
+//             </script>
+//         ';
+//     }
+//     else {
+//         echo '
+//             <script>
+//                 alert("Error in admin DB");
+//                 window.location = "../admin/confirmation.php";
+//             </script>
+//         ';
+//     }
+// }
+// else {
+//     echo '
+//     <script>
+//         alert("Error in confirmation");
+//         window.location = "../admin/confirmation.php";
+//     </script>
+// ';
+// }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,13 +62,14 @@
             ">GO Wander</span></p>
 
             <nav class="navbar">
-                <a href="#"
-                    class="text-lg px-2 py-1 ml-1 hover:underline hover:underline-offset-4 hover:decoration-2 text-slate-400 font-normal hover:decoration-yellow-600 hover:text-yellow-600">Admin</a>
-                <a href="user-info.php"
-                    class="text-lg px-2 py-1 ml-1 hover:underline hover:underline-offset-4 hover:decoration-2 text-slate-400 font-normal hover:decoration-yellow-600 hover:text-yellow-600">User
-                    info</a>
-                <a href="confirmation.html"
-                    class="text-lg px-2 py-1 ml-1 hover:underline hover:underline-offset-4 hover:decoration-2 text-slate-400 font-normal hover:decoration-yellow-600 hover:text-yellow-600">Confirm</a>
+                <a href="main-home.html"
+                class="text-lg px-2 py-1 ml-1 hover:underline hover:underline-offset-4 hover:decoration-2 text-slate-400 font-normal hover:decoration-yellow-600 hover:text-yellow-600">Home</a>
+                <a href="package.html"
+                class="text-lg px-2 py-1 ml-1 hover:underline hover:underline-offset-4 hover:decoration-2 text-slate-400 font-normal hover:decoration-yellow-600 hover:text-yellow-600">Packages</a>
+                <a href="bookings.html"
+                class="text-lg px-2 py-1 ml-1 hover:underline hover:underline-offset-4 hover:decoration-2 text-slate-400 font-normal hover:decoration-yellow-600 hover:text-yellow-600">Book</a>
+                <a href="about.html"
+                class="text-lg px-2 py-1 ml-1 hover:underline hover:underline-offset-4 hover:decoration-2 text-slate-400 font-normal hover:decoration-yellow-600 hover:text-yellow-600">About</a>
             </nav>
 
             <!-- <div id="menu-btn" class="fas fa-bars"></div> -->
@@ -42,7 +80,20 @@
 
     <main>
         <div class="container py-32">
-
+        <?php
+if ($approved) {
+?>
+                <p class="text-center text-6xl text-slate-500"> Your Trip Has Been Booked!!! </p>
+                <a href="main-home.html"
+                class="group relative flex justify-center ml-64 mt-12 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" style="width: 10rem">Go Back</a>
+                <?php
+}
+else {
+?>
+                    <p class="text-center text-6xl text-slate-500"> Please wait!!! </p>
+                <?php
+}
+?>
         </div>
     </main>
 

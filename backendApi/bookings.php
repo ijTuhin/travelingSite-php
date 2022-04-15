@@ -29,7 +29,7 @@ if (mysqli_num_rows($check) > 0) {
                 echo '
                 <script>
                     alert("Request has been processed");
-                    window.location = "../backend/pending.html";
+                    window.location = "../backend/pending.php";
                 </script>
             ';
             }
