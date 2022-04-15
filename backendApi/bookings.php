@@ -23,16 +23,13 @@ if (mysqli_num_rows($check) > 0) {
         $confirm_check = mysqli_query($connect, "SELECT * FROM user WHERE id='$u_id' AND confirm=0");
 
         if ($confirm_check) {
-            $request = $_POST['request'];
-            $confirm = $_POST['confirm'];
-
             $rqst = mysqli_query($connect, "UPDATE user SET request=1 WHERE id='$u_id' ");
             $rqst_id = mysqli_query($connect, "INSERT INTO admin(rqst_id) VALUES('$u_id')");
             if ($rqst && $rqst_id) {
                 echo '
                 <script>
                     alert("Request has been processed");
-                    window.location = "../backend/bookings.html";
+                    window.location = "../backend/pending.html";
                 </script>
             ';
             }
