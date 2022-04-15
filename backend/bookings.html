@@ -50,38 +50,39 @@
     <!-- Booking form section -->
     <section class="mx-96">
       <h1 class="heading-title text-center text-4xl">book your trip!</h1>
-      <form action="book_form.php" method="post" class="my-8 book-form flex flex-col justify-center items-center">
+      <form action="../backendApi/bookings.php" method="POST"
+        class="my-8 book-form flex flex-col justify-center items-center">
         <div class="flex flex-row">
           <label for="name"></label>
           <input
             class="mr-1 border hover:bg-slate-300 hover:placeholder-gray-600 focus:outline outline-offset-0 focus:placeholder-gray-600 py-1 px-2 pr-8 mb-1"
-            type="text" placeholder="Your name" name="" id="name" style="width: 17rem;">
+            type="text" placeholder="Your name" name="name" id="name" style="width: 17rem;">
           <label for="phone"></label>
           <input
             class="ml-1 border hover:bg-slate-300 hover:placeholder-gray-600 focus:outline outline-offset-0 focus:placeholder-gray-600 py-1 px-2 pr-8 mb-1"
-            type="tel" placeholder="Phone number" name="" id="phone" style="width: 17rem;">
+            type="tel" placeholder="Phone number" name="phone" id="phone" style="width: 17rem;">
         </div>
         <div class="flex flex-row">
           <label for="email"></label>
           <input
             class="mr-1 border hover:bg-slate-300 hover:placeholder-gray-600 focus:outline outline-offset-0 focus:placeholder-gray-600 py-1 px-2 pr-8 mb-1"
-            type="email" placeholder="Email address" name="" id="email" style="width: 17rem;">
+            type="email" placeholder="Email address" name="email" id="email" style="width: 17rem;">
           <label for="address"></label>
           <input
             class="ml-1 border hover:bg-slate-300 hover:placeholder-gray-600 focus:outline outline-offset-0 focus:placeholder-gray-600 py-1 px-2 pr-8 mb-1"
-            type="text" placeholder="Address" name="" id="address" style="width: 17rem;">
+            type="text" placeholder="Address" name="address" id="address" style="width: 17rem;">
         </div>
         <hr class="mx-2 px-2 my-4 border-b border-gray-300" style="width: 35.5rem;">
         <div class="flex flex-row w-50 justify-center items-center">
           <label for="guest" class="w-75">Total Guests: </label>
           <input
             class="border hover:bg-slate-300 hover:placeholder-gray-600 focus:outline outline-offset-0 focus:placeholder-gray-600 py-1 px-2 pr-8 mb-1"
-            type="number" placeholder="Guest number" name="" id="guest" style="width: 22rem;">
+            type="number" placeholder="Guest number" name="member" id="guest" style="width: 22rem;">
         </div>
         <hr class="mx-2 px-2 my-4 border-b border-gray-300" style="width: 35.5rem;">
         <div class="flex flex-col justify-center items-start">
           <label for="visiting-spot">Visiting spot</label>
-          <textarea placeholder="Places you would like to visit.." name="" id="visiting-spot" cols="30" rows="3"
+          <textarea placeholder="Places you would like to visit.." name="location" id="visiting-spot" cols="30" rows="3"
             style="width: 30rem;"
             class="border hover:bg-slate-300 hover:placeholder-gray-600 focus:outline outline-offset-0 focus:placeholder-gray-600 p-2 mt-1"></textarea>
         </div>
@@ -91,13 +92,13 @@
             <label for="check-in">Checked-in</label>
             <input
               class="border hover:bg-slate-300 hover:placeholder-gray-600 focus:outline outline-offset-0 focus:placeholder-gray-600 py-1 px-2 pr-8 mb-1"
-              type="date" placeholder="Checked-in" name="" id="check-in" style="width: 17rem;">
+              type="date" placeholder="Checked-in" name="checkin" id="check-in" style="width: 17rem;">
           </div>
           <div class="flex flex-col">
             <label for="check-out">Checked-out</label>
             <input
               class="border hover:bg-slate-300 hover:placeholder-gray-600 focus:outline outline-offset-0 focus:placeholder-gray-600 py-1 px-2 pr-8 mb-1"
-              type="date" placeholder="Checked-out" name="" id="check-out" style="width: 17rem;">
+              type="date" placeholder="Checked-out" name="checkout" id="check-out" style="width: 17rem;">
           </div>
         </div>
         <input type="submit" value="Book now"
