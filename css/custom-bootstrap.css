@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Source+Code+Pro&display=swap');
+
 .carousel-caption {
     transform: translateY(-50%);
     bottom: initial;
     top: 50%;
 }
+/* body{
+    position: absolute;
+}
+header .fixed {
+    position: fixed;
+} */
 
 /* service section */
 .services .box-container {
