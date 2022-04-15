@@ -1,9 +1,5 @@
 body {
     margin: auto;
-    /* background-image: url('../images/home.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 150% ;
-    background-position: center center; */
 }
 
 header {
@@ -18,8 +14,6 @@ header {
 }
 
 .navbar a {
-    /* text-decoration: none; */
-    /* color: whitesmoke; */
     padding: 5px;
 }
 
