@@ -1,3 +1,10 @@
+<?php
+session_start();
+include("../backendApi/connectDB.php");
+$userdata = mysqli_query($connect, "SELECT * FROM user");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +20,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/custom-bootstrap.css">
-    <title>Travel Wander-Admin Panel</title>
+    <title>Travel Wander-User Data</title>
 </head>
 
 <body class=" relative">
@@ -38,8 +45,30 @@
 
 
     <main>
-        <div class="container">
-            <p class="py-48">User Info</p>
+        <div class="container py-32">
+            <table align="center" border="1px" style="width: 600px; line-height: 40px;">
+                <tr>
+                    <th colspan="4">User Data</th>
+                </tr>
+                <tr>
+                    <th>User Name</th>
+                    <th>Phone number</th>
+                    <th>Email address</th>
+                    <th>User Image</th>
+                </tr>
+                <?php
+while ($data = mysqli_fetch_assoc($userdata)) {
+?>
+                <tr>
+                    <td><?php echo $data['user_name']; ?></td>
+                    <td><?php echo $data['user_phone']; ?></td>
+                    <td><?php echo $data['user_email']; ?></td>
+                    <td>User Image</td>
+                </tr>
+                <?php
+}
+?>
+            </table>
         </div>
     </main>
 
