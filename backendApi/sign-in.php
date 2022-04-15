@@ -2,10 +2,10 @@
 session_start();
 include("connectDB.php");
 
-$email = $_POST['email'];
+$user_email = $_POST['user_email'];
 $password = $_POST['password'];
 
-$check = mysqli_query($connect, "SELECT * FROM signup WHERE email='$email' AND password='$password'");
+$check = mysqli_query($connect, "SELECT * FROM user WHERE user_email='$user_email' AND password='$password'");
 if (mysqli_num_rows($check) > 0) {
   echo '
           <script>
