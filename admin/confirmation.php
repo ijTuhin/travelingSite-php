@@ -52,25 +52,25 @@ $userdata = mysqli_query($connect, "SELECT * FROM user WHERE  id='$u_id'  ");
         <div class="container py-32">
             <table align="center" border="1px" style="width: 600px; line-height: 40px;">
                 <tr>
-                    <th colspan="4">User Data</th>
+                    <th colspan="4" class="text-3xl text-amber-500">Current User</th>
                 </tr>
                 <tr>
-                    <th>User Name</th>
-                    <th>Phone number</th>
-                    <th>Email address</th>
-                    <th>Booking Request</th>
+                    <th class="font-medium text-start">Phone number</th>
+                    <th class="font-medium text-start">Email address</th>
+                    <th class="font-medium text-start">Booking Request</th>
+                    <th class="font-medium text-start">User Name</th>
                 </tr>
                 <?php
 $data = mysqli_fetch_assoc($userdata)
 ?>
                 <tr>
-                    <td><?php echo $data['user_name']; ?></td>
-                    <td><?php echo $data['user_phone']; ?></td>
-                    <td><?php echo $data['user_email']; ?></td>
-                    <td class="text-center"><?php echo $data['request']; ?></td>
+                    <td class=" text-center border bg-gray-100"><?php echo $data['user_name']; ?></td>
+                    <td class=" text-center border bg-gray-100"><?php echo $data['user_phone']; ?></td>
+                    <td class=" text-center border bg-gray-100"><?php echo $data['user_email']; ?></td>
+                    <td class=" text-center border bg-gray-100"><?php echo $data['request']; ?></td>
                     <td class="text-center">
                         <form method="POST" action="confirm.php">
-                                <button type="submit" class="btn btn-default">Confirm</button>                      
+                                <button type="submit" class="btn btn-default border py-2 px-4 bg-gray-500 text-gray-300 hover:text-gray-200 hover:bg-gray-400 ">Confirm</button>                      
                         </form>
                     </td>
                 </tr>

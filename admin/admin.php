@@ -10,7 +10,7 @@ if (mysqli_num_rows($check) > 0) {
     echo '
           <script>
           alert("Admin verified");
-            window.location = "../admin/user-info.html";
+            window.location = "../admin/user-info.php";
           </script>
         ';
 }

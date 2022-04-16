@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2022 at 10:08 AM
+-- Generation Time: Apr 16, 2022 at 02:00 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.19
 
@@ -28,17 +28,28 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin` (
+  `a_id` int(50) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `password` varchar(50) NOT NULL,
+  `rqst_id` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`name`, `email`, `password`) VALUES
-('Mr. ABX', 'xabb@admin.com', '123xyz');
+INSERT INTO `admin` (`a_id`, `name`, `email`, `password`, `rqst_id`) VALUES
+(1, 'Mr. ABX', 'xabb@admin.com', '123xyz', ''),
+(2, '', '', '', '0'),
+(3, '', '', '', '0'),
+(4, '', '', '', '0'),
+(5, '', '', '', '0'),
+(6, '', '', '', '0'),
+(7, '', '', '', '0'),
+(8, '', '', '', '0'),
+(9, '', '', '', '5'),
+(10, '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -48,7 +59,17 @@ INSERT INTO `admin` (`name`, `email`, `password`) VALUES
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
-  ADD PRIMARY KEY (`password`);
+  ADD PRIMARY KEY (`a_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `a_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

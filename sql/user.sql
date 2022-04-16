@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2022 at 09:10 AM
+-- Generation Time: Apr 16, 2022 at 02:00 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.19
 
@@ -33,15 +33,21 @@ CREATE TABLE `user` (
   `user_phone` bigint(100) NOT NULL,
   `user_email` varchar(255) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `image` varchar(255) NOT NULL
+  `image` varchar(255) NOT NULL,
+  `request` int(100) NOT NULL,
+  `confirm` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `user_name`, `user_phone`, `user_email`, `password`, `image`) VALUES
-(1, 'Israt', 22223333, 'abcd2233@mail.com', '1212', 'SnapPic Collage_2020127194443453.jpg');
+INSERT INTO `user` (`id`, `user_name`, `user_phone`, `user_email`, `password`, `image`, `request`, `confirm`) VALUES
+(1, 'Israt', 22223333, 'abcd2233@mail.com', '1212', 'SnapPic Collage_2020127194443453.jpg', 0, 0),
+(2, 'Tuhin', 22223333, 'abcd2200@mail.com', '2233', 'githubDP.jpg', 0, 0),
+(4, 'Rahim', 12345678, 'rahim@mail.com', '1234', 'IIUC.png', 0, 0),
+(5, 'Sameer', 342351, 'sameer@sam.com', '1112', 'Screenshot (1).png', 1, 0),
+(6, 'Sanju', 10897644, 'sanju123@abc.com', '1231', 'Screenshot (1).png', 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -61,7 +67,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

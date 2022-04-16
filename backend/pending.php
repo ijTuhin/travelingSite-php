@@ -5,34 +5,6 @@ include("../backendApi/connectDB.php");
 $u_id = $_SESSION['userinfo']['id'];
 $approved = mysqli_query($connect, "SELECT * FROM user WHERE id='$u_id' AND confirm=1 AND request=0");
 
-// if ($approved) {
-//     if ($update_admin) {
-//         echo '
-//             <script>
-//                 alert("Request approved by admin");
-//                 window.location = "../admin/user-info.php";
-//             </script>
-//         ';
-//     }
-//     else {
-//         echo '
-//             <script>
-//                 alert("Error in admin DB");
-//                 window.location = "../admin/confirmation.php";
-//             </script>
-//         ';
-//     }
-// }
-// else {
-//     echo '
-//     <script>
-//         alert("Error in confirmation");
-//         window.location = "../admin/confirmation.php";
-//     </script>
-// ';
-// }
-
-
 ?>
 
 <!DOCTYPE html>

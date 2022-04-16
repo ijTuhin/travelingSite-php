@@ -49,23 +49,21 @@ $userdata = mysqli_query($connect, "SELECT * FROM user");
     <main>
         <div class="container py-32">
             <table align="center" border="1px" style="width: 600px; line-height: 40px;">
-                <tr>
-                    <th colspan="4">User Data</th>
-                </tr>
-                <tr>
-                    <th>User Name</th>
-                    <th>Phone number</th>
-                    <th>Email address</th>
-                    <th>Booking Request</th>
+                    <p colspan="4" class="text-center text-3xl font-medium mb-3">User Data</p>
+                <tr class="bg-blue-50">
+                    <th class="py-2 text-center border border-gray-600">User Name</th>
+                    <th class="py-2 text-center border border-gray-600">Phone number</th>
+                    <th class="py-2 text-center border border-gray-600">Email address</th>
+                    <th class="py-2 text-center border border-gray-600">Booking Request</th>
                 </tr>
                 <?php
 while ($data = mysqli_fetch_assoc($userdata)) {
 ?>
                 <tr>
-                    <td><?php echo $data['user_name']; ?></td>
-                    <td><?php echo $data['user_phone']; ?></td>
-                    <td><?php echo $data['user_email']; ?></td>
-                    <td class="text-center"><?php echo $data['request']; ?></td>
+                    <td class="border bg-gray-100 px-4"><?php echo $data['user_name']; ?></td>
+                    <td class="border bg-gray-200 px-4"><?php echo $data['user_phone']; ?></td>
+                    <td class="border bg-gray-100 px-4"><?php echo $data['user_email']; ?></td>
+                    <td class="border bg-gray-200 px-4 text-center" ><?php echo $data['request']; ?></td>
                 </tr>
                 <?php
         }
